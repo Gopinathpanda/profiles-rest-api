@@ -43,3 +43,17 @@ Profiles REST API course.
 8. Go to localhost from your browser.
 
 > localhost:8000 or 127.0.0.1:8000
+9. commit and push changes
+
+### 3. Setup Database
+1. In models.py file add code
+2. Add below line in settings.py for authentication
+> AUTH_USER_MODEL =  'profiles_api.UserProfile'
+
+3. Create migrations under vagrant server when the virtual environment is activated
+>  python manage.py makemigrations profiles_api
+
+4. Migrate changes
+
+> python manage.py migrate
+
