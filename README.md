@@ -20,3 +20,26 @@ Profiles REST API course.
 > vagrant ssh 
 4. In this guest OS we can run our application and exit to go to local machine.
 5. To create any file which is point to profiles-rest-api do cd /vagrant
+
+### 3. Creating Django Application
+1. Create Python virtual environment in vagrant server under /vagrant folder.
+
+>  python -m venv ~/env (It will create the virtual machine under in home directory of vagrant server (~ will do it))
+2. Activate the virtual environment
+> source ~/env/bin/activate
+
+3. Create requirements.txt and install requirements by typing below commands:-
+> pip install -r requirements.txt
+4. Create Django Project
+>  django-admin.py startproject profiles_project . ('.' represents the location if we don't specify this it will create a sub folder)
+5. Create a application
+>  python manage.py startapp profiles_api
+6. Enable Django settings by adding below under INSTALLED_APPS
+> 'rest_framework',
+    'rest_framework.authtoken',
+    'profiles_api'
+7. Test the Django project under vagrant server where virtual environment enabled
+> python manage.py runserver 0.0.0.0:8000
+8. Go to localhost from your browser.
+
+> localhost:8000 or 127.0.0.1:8000
