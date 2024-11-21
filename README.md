@@ -57,3 +57,18 @@ Profiles REST API course.
 
 > python manage.py migrate
 
+### 4. Setup Django Admin
+1. Create a super user -> A user with max privileges over the DB
+
+> python manage.py createsuperuser
+
+2. Enable Django admin
+
+Add changes to admin.py by registering the model
+
+3. run the server on vagrant env and go to http://127.0.0.1:8000/admin url and log in using pandagopina****@gmail.com and pass is 
+G********0. The UserProfile model shown as User profiles
+
+
+
+

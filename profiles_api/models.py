@@ -6,7 +6,7 @@ from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.models import BaseUserManager  # Base user manager
 
 
-class UserProfileManager():
+class UserProfileManager(BaseUserManager):
     """Manager for user profiles"""
 
     def create_user(self, email, name, password=None):
@@ -19,7 +19,7 @@ class UserProfileManager():
         user.save(using=self._db)  # standard proceduce to save data
         return user
 
-    def create_superuser(self, email, name, password):
+    def create_superuser(self, email, name, password):# Under the hood the python manage.py createsuperuser used this method
         """Create and save a new superuser with given details"""
         user = self.create_user(email, name, password)
         user.is_superuser = True  # Automatically this field created by PermissionsMixin class
