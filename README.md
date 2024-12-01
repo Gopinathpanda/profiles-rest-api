@@ -98,4 +98,25 @@ and working with local files.
 10. For patch request we can only provide raw data in json as it updates only those fields which we have provided.
 ![img_5.png](img_5.png)
 
+### 7. Use Viewset class instead of APIView
+1. ViewSets allow us to write the logic for our endpoints instead of defining functions it uses model operation for function.
+2. ViewSete accept functions mapped common api object actions.
+3. Ex:- list() -> Getting list of objects, 
+        create() - create an object
+        retrieve() - getting a specific object
+        update() -> updating an objecct
+        partial_update() -> partial updating an object
+        destroy() -> delete an object
+4. Takes care of a lot of typical logic
+5. Perfect for standard database operations
+6. Fastest way to make API backend.
+7. in views.py create a HelloViewSets class
+8. After that in app urls.py create router and then runserver - http://localhost:8000/api/
+![img_6.png](img_6.png)
+9. Add same serializer previously created. and use other methods of viewset.
+10. run the server - http://localhost:8000/api/hello-viewset/
+![img_7.png](img_7.png)
+11. Here we don't see retrieve, update, partial_update, destroy as these apis required a pk after the URL - http://localhost:8000/api/hello-viewset/1/
+![img_8.png](img_8.png)
+
 
