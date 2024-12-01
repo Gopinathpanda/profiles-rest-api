@@ -29,7 +29,7 @@ Profiles REST API course.
 > source ~/env/bin/activate
 
 3. Create requirements.txt and install requirements by typing below commands:-
-> pip install -r requirements.txt
+> pip install -r requirements.txtb  
 4. Create Django Project
 >  django-admin.py startproject profiles_project . ('.' represents the location if we don't specify this it will create a sub folder)
 5. Create a application
@@ -68,6 +68,16 @@ Add changes to admin.py by registering the model
 
 3. run the server on vagrant env and go to http://127.0.0.1:8000/admin url and log in using pandagopina****@gmail.com and pass is 
 G********0. The UserProfile model shown as User profiles
+
+
+### 5. Intro to APIView
+1. Basic type of view to build our APIs. Describe the logic to make API endpoint.
+2. It uses standard HTTP methods for functions. get , post,put,patch(partially update an item.),delete
+3. Gives most control on our application logic. Perfect for implementing complex logic and calling other APIs 
+and working with local files.
+4. For processing files and rendering a synchronous response and accessing local files or data it is best suited.
+5. Write the HelloApiView class as APIView for demonstration and also include the profiles_api urls.py file in the root urls.py
+6. Then run the server and go the url for HelloApiView.(http://localhost:8000/api/hello-view/)
 
 
 
