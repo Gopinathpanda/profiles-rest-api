@@ -78,7 +78,24 @@ and working with local files.
 4. For processing files and rendering a synchronous response and accessing local files or data it is best suited.
 5. Write the HelloApiView class as APIView for demonstration and also include the profiles_api urls.py file in the root urls.py
 6. Then run the server and go the url for HelloApiView.(http://localhost:8000/api/hello-view/)
+![img.png](img.png)
 
 
+### 6. Add Serializer to our view
+1. A feature from django rest framework that allows you to easily convert data i/p to python object and vice versa.
+2. Similar to django form which have various fields and accepts i/p for your api.
+3. Add post/update functionality to HelloApiView we need to create a serializer to receive the content we post to the API.
+4. Create a new file in profile_api app
+5. After serializer HelloSerializer got created add POST functionality to our APIView.
+6. When we load the the same url for hello-view we can see a new field name populated below.
+![img_1.png](img_1.png)
+7. Once you give a name <10 it prints a Hello message
+![img_2.png](img_2.png)
+8. If name field has >10 length it will throw 400 bad request.
+![img_3.png](img_3.png)
+9. Add other HTTP methods put, patch and delete
+![img_4.png](img_4.png)
+10. For patch request we can only provide raw data in json as it updates only those fields which we have provided.
+![img_5.png](img_5.png)
 
 
